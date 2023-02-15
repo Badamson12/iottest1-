@@ -1,0 +1,19 @@
+<div className="container">
+    <h1>Image and Text Display</h1>
+    <div className="form-container">
+      <form onSubmit={handleSubmit}>
+        <label>
+          Enter some text:
+          <input type="text" value={value} onChange={handleChange} />
+        </label>
+        <button type="submit">Submit</button>
+        <button type="button" onClick={handleShowTextClick}>
+          Show Text
+        </button>
+        <button type="button" onClick={handleResetClick}>
+          Reset
+        </button>
+      </form>
+    </div>
+    {showText
+  

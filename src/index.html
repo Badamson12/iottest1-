@@ -1,0 +1,31 @@
+<div className="container">
+    <h1>Image and Text Display</h1>
+    <div className="form-container">
+      <form onSubmit={handleSubmit}>
+        <label>
+          Enter some text:
+          <input type="text" value={value} onChange={handleChange} />
+        </label>
+        <div className="button-container">
+          <button type="submit">Submit</button>
+          <button type="button" onClick={handleShowTextClick}>
+            Show Text
+          </button>
+          <button type="button" onClick={handleResetClick}>
+            Reset
+          </button>
+        </div>
+      </form>
+    </div>
+    {showText && (
+      <div className="text-container">
+        <p>You entered: {value}</p>
+      </div>
+    )}
+    {showImage && (
+      <div className="image-container">
+        <img src="https://picsum.photos/200" alt="Random Image" />
+      </div>
+    )}
+  </div>
+  
